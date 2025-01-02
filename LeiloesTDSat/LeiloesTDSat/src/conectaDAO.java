@@ -21,13 +21,17 @@ public class conectaDAO {
         Connection conn = null;
         
         try {
-        
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/uc11?user=root&password=");
+            String url = "jdbc:mysql://localhost:3306/uc11?serverTimezone=America/Sao_Paulo";
+            String user = "root";
+            String password = "QqEeSs113wAd2#";
+            conn = DriverManager.getConnection(url, user, password);
+            return conn;
             
-        } catch (SQLException erro){
-            JOptionPane.showMessageDialog(null, "Erro ConectaDAO" + erro.getMessage());
+        } catch (SQLException e){
+            JOptionPane.showMessageDialog(null, "Erro ConectaDAO: " + e.getMessage());
+            return null;
         }
-        return conn;
+        
     }
     
 }
