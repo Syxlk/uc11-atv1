@@ -44,5 +44,16 @@ public class ProdutosDTO {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    public ProdutosDTO() {}
+    
+    public ProdutosDTO(Integer id, String nome, Integer valor, String status) {
+        this.id = id;
+        this.nome = nome;
+        this.valor = valor;
+        this.status = status;
+    }
+    
+    
     
 }
